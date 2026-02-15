@@ -70,8 +70,8 @@ export default function Footer() {
                 <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm">
                     <p>&copy; {new Date().getFullYear()} Harsham Residences. All rights reserved.</p>
                     <div className="flex gap-6">
-                        <Link href="#" className="hover:text-emerald-500 transition-colors">Privacy Policy</Link>
-                        <Link href="#" className="hover:text-emerald-500 transition-colors">Terms of Service</Link>
+                        <Link href="/privacy-policy" className="hover:text-emerald-500 transition-colors">Privacy Policy</Link>
+                        <Link href="/terms-of-service" className="hover:text-emerald-500 transition-colors">Terms of Service</Link>
                     </div>
                 </div>
             </div>

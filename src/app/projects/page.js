@@ -40,10 +40,11 @@ export default function Projects() {
                         description="Perfectly planned plots for your dream home, equipped with modern amenities and excellent connectivity."
                         image="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2724&auto=format&fit=crop"
                         features={[
-                            "Well-planned plots",
-                            "Black-top roads & drainage",
-                            "Street lights & amenities",
-                            "Ideal for home construction"
+                            "Solar Street Lights",
+                            "Club House",
+                            "Kids School",
+                            "Hospital",
+                            "Gazebo"
                         ]}
                         icon={<Home className="w-8 h-8 text-emerald-600" />}
                         reverse={false}
@@ -55,10 +56,12 @@ export default function Projects() {
                         description="Escape to nature with our fertile and scenic farm lands, perfect for agriculture or a weekend retreat."
                         image="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2832&auto=format&fit=crop"
                         features={[
-                            "Fertile agricultural land",
-                            "Weekend home suitable plots",
-                            "Pollution-free environment",
-                            "Long-term appreciation"
+                            "Club House",
+                            "Monthly Returns",
+                            "Gated Community",
+                            "Solar Street Lights",
+                            "Swimming Pool",
+                            "Gazebo"
                         ]}
                         icon={<Trees className="w-8 h-8 text-emerald-600" />}
                         reverse={true}
@@ -80,6 +83,22 @@ export default function Projects() {
                     />
                 </div>
             </div>
+
+            {/* Buying Process */}
+            <Section className="bg-emerald-900 text-white">
+                <div className="container mx-auto px-4 md:px-6">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-4xl font-playfair font-bold mb-4">Hassle-Free Buying Process</h2>
+                        <p className="text-emerald-100 max-w-2xl mx-auto">We make owning your dream plot a simple and transparent journey.</p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+                        <ProcessStep number="01" title="Site Visit" desc="Schedule a free site visit to explore the location and amenities." />
+                        <ProcessStep number="02" title="Plot Selection" desc="Choose the perfect plot that meets your investment goals." />
+                        <ProcessStep number="03" title="Documentation" desc="Complete legal verification and documentation with our expert team." />
+                        <ProcessStep number="04" title="Registration" desc="Secure your asset with hassle-free registration and ownership transfer." />
+                    </div>
+                </div>
+            </Section>
 
             {/* Infrastructure Features */}
             <Section className="bg-white">
@@ -152,6 +171,26 @@ function ProjectCategory({ title, description, image, features, icon, reverse })
                         </li>
                     ))}
                 </ul>
+            </div>
+        </motion.div>
+    );
+}
+
+function ProcessStep({ number, title, desc }) {
+    return (
+        <motion.div
+            whileHover={{ y: -5 }}
+            className="bg-emerald-800 p-8 rounded-2xl border border-emerald-700 relative overflow-hidden group"
+        >
+            <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                <span className="text-9xl font-bold font-playfair">{number}</span>
+            </div>
+            <div className="relative z-10">
+                <div className="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center text-xl font-bold mb-6 shadow-lg">
+                    {number}
+                </div>
+                <h3 className="text-xl font-bold mb-3">{title}</h3>
+                <p className="text-emerald-100 leading-relaxed">{desc}</p>
             </div>
         </motion.div>
     );

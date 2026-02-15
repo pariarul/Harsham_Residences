@@ -5,6 +5,7 @@ import { ArrowRight, CheckCircle2, MapPin, TreePine, ShieldCheck, TrendingUp } f
 import Button from "@/components/ui/Button";
 import Section from "@/components/ui/Section";
 import Image from "next/image";
+import { StatCounter, TestimonialCard } from "@/components/home/HomeComponents";
 
 export default function Home() {
   return (
@@ -118,6 +119,44 @@ export default function Home() {
               icon={<TrendingUp className="w-10 h-10 text-emerald-600" />}
               title="High Appreciation"
               description="Designed to offer substantial returns on investment over the long term."
+            />
+          </div>
+        </div>
+      </Section>
+
+      <Section className="bg-emerald-900 text-white py-16">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <StatCounter end={12} title="Years of Experience" />
+            <StatCounter end={50} suffix="+" title="Completed Projects" />
+            <StatCounter end={1500} suffix="+" title="Happy Customers" />
+            <StatCounter end={100} suffix="%" title="Legal Compliance" />
+          </div>
+        </div>
+      </Section>
+
+      {/* Testimonials */}
+      <Section className="bg-slate-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-playfair font-bold text-slate-900 mb-4">Client Speak</h2>
+            <p className="text-slate-600 max-w-2xl mx-auto">Hear what our satisfied customers have to say about their investment journey with us.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <TestimonialCard
+              name="Rajesh Kumar"
+              role="Software Engineer"
+              content="Investing with Harsham was the best decision. The clarity in documentation and their professional approach gave me complete confidence."
+            />
+            <TestimonialCard
+              name="Anita Desai"
+              role="Business Owner"
+              content="I was looking for a farm land for a weekend getaway. The location they suggested is beautiful and has appreciated significantly in just 2 years."
+            />
+            <TestimonialCard
+              name="Suresh Reddy"
+              role="NRI Investor"
+              content="Living abroad, it's hard to trust local developers. Harsham's transparency and regular updates made the entire process seamless."
             />
           </div>
         </div>

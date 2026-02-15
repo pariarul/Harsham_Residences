@@ -112,6 +112,33 @@ export default function About() {
                 </div>
             </Section>
 
+            {/* Leadership Team */}
+            <Section className="bg-white">
+                <div className="container mx-auto px-4 md:px-6">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-4xl font-playfair font-bold text-slate-900 mb-4">Meet Our Leaders</h2>
+                        <p className="text-slate-600 max-w-2xl mx-auto">Driven by a passion for excellence and a commitment to delivering quality.</p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
+                        <TeamMember
+                            name="Ramesh Reddy"
+                            role="Managing Director"
+                            image="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2874&auto=format&fit=crop"
+                        />
+                        <TeamMember
+                            name="Suresh Kumar"
+                            role="Director - Operations"
+                            image="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2940&auto=format&fit=crop"
+                        />
+                        <TeamMember
+                            name="Priya Sharma"
+                            role="Head of Sales"
+                            image="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2876&auto=format&fit=crop"
+                        />
+                    </div>
+                </div>
+            </Section>
+
             {/* Core Values */}
             <Section>
                 <div className="container mx-auto px-4 md:px-6 text-center">
@@ -141,6 +168,28 @@ export default function About() {
                 </div>
             </Section>
         </>
+    );
+}
+
+function TeamMember({ name, role, image }) {
+    return (
+        <motion.div
+            whileHover={{ y: -5 }}
+            className="bg-slate-50 rounded-2xl overflow-hidden shadow-lg group"
+        >
+            <div className="relative h-80 w-full overflow-hidden">
+                <Image
+                    src={image}
+                    alt={name}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                />
+            </div>
+            <div className="p-6 text-center">
+                <h3 className="text-xl font-bold text-slate-900 mb-1">{name}</h3>
+                <p className="text-emerald-600 font-medium">{role}</p>
+            </div>
+        </motion.div>
     );
 }
 
