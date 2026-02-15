@@ -1,6 +1,9 @@
-import { Playfair_Display, Inter } from "next/font/google";
+import { Playfair_Display, Inter } from "next/font/google"; // Import fonts
 import "./globals.css";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
+// Configure fonts
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
@@ -20,9 +23,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
-      <body className="font-sans antialiased text-slate-800 bg-slate-50">
-        {children}
+    <html lang="en" className={`${playfair.variable} ${inter.variable} scroll-smooth`}>
+      <body className="font-sans antialiased text-slate-800 bg-slate-50 flex flex-col min-h-screen">
+        <Navbar />
+        <main className="flex-grow">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
