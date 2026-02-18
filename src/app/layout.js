@@ -17,8 +17,8 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Harsham Residences | Premium Real Estate & Farm Lands",
-  description: "Harsham Residences / Harsham Farms - Trusted real estate development company offering premium residential layouts and farm land projects.",
+  title: "Haarsham Farms & Developers | Premium Real Estate & Farm Lands",
+  description: "Haarsham Farms & Developers - Trusted real estate development company offering premium residential layouts and farm land projects.",
 };
 
 export default function RootLayout({ children }) {

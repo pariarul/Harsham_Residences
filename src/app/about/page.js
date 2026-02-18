@@ -9,7 +9,7 @@ export default function About() {
     return (
         <>
             {/* Page Header */}
-            <section className="bg-slate-900 py-20 text-center relative overflow-hidden">
+            <section className="py-20 text-center relative overflow-hidden" style={{ backgroundColor: '#1a4a2e' }}>
                 <div className="absolute inset-0 z-0 opacity-20">
                     <Image
                         src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop"
@@ -37,12 +37,12 @@ export default function About() {
                 <div className="container mx-auto px-4 md:px-6">
                     <div className="flex flex-col md:flex-row gap-12 items-center">
                         <div className="md:w-1/2">
-                            <h2 className="text-emerald-600 font-medium tracking-wide uppercase mb-3">Company Overview</h2>
+                            <h2 className="font-medium tracking-wide uppercase mb-3" style={{ color: '#1a4a2e' }}>Company Overview</h2>
                             <h3 className="text-3xl font-playfair font-bold text-slate-900 mb-6">
                                 Redefining Real Estate Standards
                             </h3>
                             <p className="text-slate-600 mb-6 leading-relaxed text-lg">
-                                Harsham Residences / Harsham Farms is a professionally managed real-estate development company focused on creating legally compliant, well-planned residential and farm land communities.
+                                Haarsham Farms &amp; Developers is a professionally managed real-estate development company focused on creating legally compliant, well-planned residential and farm land communities.
                             </p>
                             <p className="text-slate-600 leading-relaxed text-lg">
                                 We believe in delivering value beyond just land. Our projects are designed to offer a blend of modern infrastructure and natural serenity, ensuring a high quality of life and exceptional return on investment for our customers.
@@ -66,11 +66,11 @@ export default function About() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <motion.div
                             whileHover={{ y: -5 }}
-                            className="bg-white p-8 rounded-2xl shadow-md border-l-4 border-emerald-500"
+                            className="bg-white p-8 rounded-2xl shadow-md" style={{ borderLeft: '4px solid #c9a227' }}
                         >
                             <div className="flex items-center gap-4 mb-4">
-                                <div className="bg-emerald-100 p-3 rounded-full">
-                                    <Eye className="w-8 h-8 text-emerald-600" />
+                                <div className="p-3 rounded-full" style={{ backgroundColor: 'rgba(201,162,39,0.15)' }}>
+                                    <Eye className="w-8 h-8" style={{ color: '#1a4a2e' }} />
                                 </div>
                                 <h3 className="text-2xl font-bold font-playfair text-slate-900">Our Vision</h3>
                             </div>
@@ -81,29 +81,29 @@ export default function About() {
 
                         <motion.div
                             whileHover={{ y: -5 }}
-                            className="bg-white p-8 rounded-2xl shadow-md border-l-4 border-emerald-500"
+                            className="bg-white p-8 rounded-2xl shadow-md" style={{ borderLeft: '4px solid #c9a227' }}
                         >
                             <div className="flex items-center gap-4 mb-4">
-                                <div className="bg-emerald-100 p-3 rounded-full">
-                                    <Target className="w-8 h-8 text-emerald-600" />
+                                <div className="p-3 rounded-full" style={{ backgroundColor: 'rgba(201,162,39,0.15)' }}>
+                                    <Target className="w-8 h-8" style={{ color: '#1a4a2e' }} />
                                 </div>
                                 <h3 className="text-2xl font-bold font-playfair text-slate-900">Our Mission</h3>
                             </div>
                             <ul className="space-y-3 text-slate-600 text-lg">
                                 <li className="flex items-center gap-3">
-                                    <span className="w-2 h-2 bg-emerald-500 rounded-full" />
+                                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#c9a227' }} />
                                     Deliver DTCP / RERA-approved projects
                                 </li>
                                 <li className="flex items-center gap-3">
-                                    <span className="w-2 h-2 bg-emerald-500 rounded-full" />
+                                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#c9a227' }} />
                                     Ensure clear documentation and ownership
                                 </li>
                                 <li className="flex items-center gap-3">
-                                    <span className="w-2 h-2 bg-emerald-500 rounded-full" />
+                                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#c9a227' }} />
                                     Provide modern, eco-friendly infrastructure
                                 </li>
                                 <li className="flex items-center gap-3">
-                                    <span className="w-2 h-2 bg-emerald-500 rounded-full" />
+                                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#c9a227' }} />
                                     Build trust through ethical business practices
                                 </li>
                             </ul>
@@ -187,7 +187,7 @@ function TeamMember({ name, role, image }) {
             </div>
             <div className="p-6 text-center">
                 <h3 className="text-xl font-bold text-slate-900 mb-1">{name}</h3>
-                <p className="text-emerald-600 font-medium">{role}</p>
+                <p className="font-medium" style={{ color: '#1a4a2e' }}>{role}</p>
             </div>
         </motion.div>
     );
@@ -202,7 +202,7 @@ function ValueCard({ icon, title, desc }) {
             whileHover={{ y: -5 }}
             className="bg-white p-6 rounded-2xl shadow-lg border border-slate-100 hover:border-emerald-200 transition-colors"
         >
-            <div className="w-20 h-20 bg-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-emerald-200">
+            <div className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg" style={{ backgroundColor: '#1a4a2e' }}>
                 {icon}
             </div>
             <h3 className="text-xl font-bold text-slate-900 mb-3">{title}</h3>

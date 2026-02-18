@@ -8,7 +8,7 @@ import Image from "next/image";
 export default function Projects() {
     return (
         <>
-            <section className="bg-slate-900 py-20 text-center relative overflow-hidden">
+            <section className="py-20 text-center relative overflow-hidden" style={{ backgroundColor: '#1a4a2e' }}>
                 <div className="absolute inset-0 z-0 opacity-20">
                     <Image
                         src="https://images.unsplash.com/photo-1592595896551-12b371d546d5?q=80&w=2940&auto=format&fit=crop"
@@ -46,7 +46,7 @@ export default function Projects() {
                             "Hospital",
                             "Gazebo"
                         ]}
-                        icon={<Home className="w-8 h-8 text-emerald-600" />}
+                        icon={<Home className="w-8 h-8" style={{ color: '#1a4a2e' }} />}
                         reverse={false}
                     />
 
@@ -63,7 +63,7 @@ export default function Projects() {
                             "Swimming Pool",
                             "Gazebo"
                         ]}
-                        icon={<Trees className="w-8 h-8 text-emerald-600" />}
+                        icon={<Trees className="w-8 h-8" style={{ color: '#1a4a2e' }} />}
                         reverse={true}
                     />
 
@@ -78,18 +78,18 @@ export default function Projects() {
                             "Organized infrastructure",
                             "Controlled access"
                         ]}
-                        icon={<Lock className="w-8 h-8 text-emerald-600" />}
+                        icon={<Lock className="w-8 h-8" style={{ color: '#1a4a2e' }} />}
                         reverse={false}
                     />
                 </div>
             </div>
 
             {/* Buying Process */}
-            <Section className="bg-emerald-900 text-white">
+            <Section className="text-white" style={{ backgroundColor: '#0f2d1c' }}>
                 <div className="container mx-auto px-4 md:px-6">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-4xl font-playfair font-bold mb-4">Hassle-Free Buying Process</h2>
-                        <p className="text-emerald-100 max-w-2xl mx-auto">We make owning your dream plot a simple and transparent journey.</p>
+                        <p className="text-green-200 max-w-2xl mx-auto">We make owning your dream plot a simple and transparent journey.</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                         <ProcessStep number="01" title="Site Visit" desc="Schedule a free site visit to explore the location and amenities." />
@@ -110,19 +110,19 @@ export default function Projects() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         <FeatureCard
-                            icon={<Route className="w-10 h-10 text-emerald-600" />}
+                            icon={<Route className="w-10 h-10" style={{ color: '#1a4a2e' }} />}
                             title="Wide Internal Roads"
                         />
                         <FeatureCard
-                            icon={<Droplets className="w-10 h-10 text-emerald-600" />}
+                            icon={<Droplets className="w-10 h-10" style={{ color: '#1a4a2e' }} />}
                             title="Rainwater Harvesting"
                         />
                         <FeatureCard
-                            icon={<Zap className="w-10 h-10 text-emerald-600" />}
+                            icon={<Zap className="w-10 h-10" style={{ color: '#1a4a2e' }} />}
                             title="Water & Electricity"
                         />
                         <FeatureCard
-                            icon={<Leaf className="w-10 h-10 text-emerald-600" />}
+                            icon={<Leaf className="w-10 h-10" style={{ color: '#1a4a2e' }} />}
                             title="Green Open Spaces"
                         />
                     </div>
@@ -151,7 +151,7 @@ function ProjectCategory({ title, description, image, features, icon, reverse })
             </div>
             <div className="lg:w-1/2">
                 <div className="flex items-center gap-4 mb-4">
-                    <div className="bg-emerald-100 p-3 rounded-full">
+                    <div className="p-3 rounded-full" style={{ backgroundColor: 'rgba(201,162,39,0.15)' }}>
                         {icon}
                     </div>
                     <h2 className="text-3xl font-playfair font-bold text-slate-900">{title}</h2>
@@ -162,7 +162,7 @@ function ProjectCategory({ title, description, image, features, icon, reverse })
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {features.map((feature, idx) => (
                         <li key={idx} className="flex items-center gap-3 text-slate-700 font-medium">
-                            <div className="w-6 h-6 rounded-full bg-emerald-500 flex items-center justify-center shrink-0">
+                            <div className="w-6 h-6 rounded-full flex items-center justify-center shrink-0" style={{ backgroundColor: '#c9a227' }}>
                                 <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                 </svg>
@@ -180,17 +180,17 @@ function ProcessStep({ number, title, desc }) {
     return (
         <motion.div
             whileHover={{ y: -5 }}
-            className="bg-emerald-800 p-8 rounded-2xl border border-emerald-700 relative overflow-hidden group"
+            className="p-8 rounded-2xl relative overflow-hidden group border" style={{ backgroundColor: '#1a4a2e', borderColor: 'rgba(201,162,39,0.3)' }}
         >
             <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                 <span className="text-9xl font-bold font-playfair">{number}</span>
             </div>
             <div className="relative z-10">
-                <div className="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center text-xl font-bold mb-6 shadow-lg">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mb-6 shadow-lg" style={{ backgroundColor: '#c9a227', color: '#1a4a2e' }}>
                     {number}
                 </div>
                 <h3 className="text-xl font-bold mb-3">{title}</h3>
-                <p className="text-emerald-100 leading-relaxed">{desc}</p>
+                <p className="text-green-200 leading-relaxed">{desc}</p>
             </div>
         </motion.div>
     );
@@ -198,7 +198,7 @@ function ProcessStep({ number, title, desc }) {
 
 function FeatureCard({ icon, title }) {
     return (
-        <div className="bg-slate-50 p-8 rounded-xl text-center hover:bg-emerald-50 transition-colors border border-transparent hover:border-emerald-100">
+        <div className="bg-slate-50 p-8 rounded-xl text-center transition-colors border border-transparent" style={{ ':hover': { backgroundColor: 'rgba(201,162,39,0.05)' } }}>
             <div className="mb-4 flex justify-center">{icon}</div>
             <h3 className="text-lg font-bold text-slate-900">{title}</h3>
         </div>

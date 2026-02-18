@@ -3,6 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #0f172a;
+  --brand-green: #1a4a2e;
+  --brand-green-dark: #0f2d1c;
+  --brand-green-light: #2d6b45;
+  --brand-gold: #c9a227;
+  --brand-gold-light: #e2b93b;
+  --brand-gold-dark: #a07d18;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -35,10 +41,10 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: var(--brand-green-light);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: var(--brand-green);
 }

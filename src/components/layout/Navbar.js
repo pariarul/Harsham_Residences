@@ -7,6 +7,8 @@ import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Button from "@/components/ui/Button";
+import Image from "next/image";
+
 
 const navLinks = [
     { name: "Home", href: "/" },
@@ -34,20 +36,22 @@ export default function Navbar() {
             className={cn(
                 "fixed w-full z-50 transition-all duration-300",
                 isScrolled
-                    ? "bg-white/90 backdrop-blur-md shadow-md py-3"
+                    ? "py-3 shadow-md"
                     : "bg-transparent py-5"
             )}
+            style={isScrolled ? { backgroundColor: "#1a4a2e" } : {}}
         >
             <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-                <Link href="/" className="flex items-center gap-2 z-50">
-                    <span className={cn(
-                        "text-2xl font-bold tracking-tight",
-                        isScrolled ? "text-slate-900" : "text-white"
-                    )}>
-                        Harsham<span className="text-emerald-500">Residences</span>
-                    </span>
-                </Link>
-
+<Link href="/" className="flex items-center gap-3 z-50">
+  <Image
+    src="/full_logo.png"
+    alt="Haarsham Farms & Developers Logo"
+    width={150}
+    height={60}
+    priority
+    className="object-contain"
+  />
+</Link>
                 {/* Desktop Navigation */}
                 <div className="hidden md:flex items-center gap-8">
                     {navLinks.map((link) => (
@@ -55,18 +59,21 @@ export default function Navbar() {
                             key={link.name}
                             href={link.href}
                             className={cn(
-                                "font-medium transition-colors hover:text-emerald-500",
+                                "font-medium transition-colors",
                                 pathname === link.href
-                                    ? "text-emerald-500"
-                                    : isScrolled ? "text-slate-700" : "text-white/90"
+                                    ? "font-semibold"
+                                    : "hover:opacity-80"
                             )}
+                            style={{
+                                color: pathname === link.href ? "#c9a227" : "rgba(255,255,255,0.9)"
+                            }}
                         >
                             {link.name}
                         </Link>
                     ))}
                     <Button
                         href="/contact"
-                        variant={isScrolled ? "primary" : "white"}
+                        variant="gold"
                         className="px-5 py-2 text-sm"
                     >
                         Book Site Visit
@@ -80,9 +87,9 @@ export default function Navbar() {
                     aria-label="Toggle menu"
                 >
                     {isOpen ? (
-                        <X className={cn("w-6 h-6", isScrolled ? "text-slate-900" : "text-white")} />
+                        <X className="w-6 h-6 text-white" />
                     ) : (
-                        <Menu className={cn("w-6 h-6", isScrolled ? "text-slate-900" : "text-white")} />
+                        <Menu className="w-6 h-6 text-white" />
                     )}
                 </button>
 
@@ -94,22 +101,36 @@ export default function Navbar() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -20 }}
                             transition={{ duration: 0.2 }}
-                            className="fixed inset-0 bg-slate-900 z-40 flex flex-col items-center justify-center space-y-8 md:hidden"
+                            className="fixed inset-0 z-40 flex flex-col items-center justify-center space-y-8 md:hidden"
+                            style={{ backgroundColor: "#1a4a2e" }}
                         >
+                            {/* Mobile Logo */}
+                            <div className="flex items-center gap-3 mb-4">
+                                <div
+                                    className="w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shadow-md"
+                                    style={{ backgroundColor: "#c9a227", color: "#1a4a2e" }}
+                                >
+                                    H
+                                </div>
+                                <div>
+                                    <p className="font-bold text-xl" style={{ color: "#c9a227" }}>Haarsham</p>
+                                    <p className="text-white text-sm">Farms &amp; Developers</p>
+                                </div>
+                            </div>
                             {navLinks.map((link) => (
                                 <Link
                                     key={link.name}
                                     href={link.href}
                                     onClick={() => setIsOpen(false)}
-                                    className={cn(
-                                        "text-2xl font-semibold transition-colors hover:text-emerald-400",
-                                        pathname === link.href ? "text-emerald-500" : "text-white"
-                                    )}
+                                    className="text-2xl font-semibold transition-colors hover:opacity-80"
+                                    style={{
+                                        color: pathname === link.href ? "#c9a227" : "white"
+                                    }}
                                 >
                                     {link.name}
                                 </Link>
                             ))}
-                            <Button href="/contact" onClick={() => setIsOpen(false)} variant="primary">
+                            <Button href="/contact" onClick={() => setIsOpen(false)} variant="gold">
                                 Book Site Visit
                             </Button>
                         </motion.div>

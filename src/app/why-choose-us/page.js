@@ -8,7 +8,7 @@ import Image from "next/image";
 export default function WhyChooseUs() {
     return (
         <>
-            <section className="bg-emerald-900 py-20 text-center relative overflow-hidden">
+            <section className="py-20 text-center relative overflow-hidden" style={{ backgroundColor: '#1a4a2e' }}>
                 <div className="absolute inset-0 z-0 opacity-20">
                     <Image
 
@@ -26,7 +26,7 @@ export default function WhyChooseUs() {
                     >
                         Why Choose Us?
                     </motion.h1>
-                    <p className="text-emerald-100 text-lg max-w-2xl mx-auto">
+                    <p className="text-green-200 text-lg max-w-2xl mx-auto">
                         Your trusted partner in secure and profitable real estate investments.
                     </p>
                 </div>
@@ -36,17 +36,17 @@ export default function WhyChooseUs() {
                 <div className="container mx-auto px-4 md:px-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <WhyCard
-                            icon={<FileText className="w-10 h-10 text-emerald-600" />}
+                            icon={<FileText className="w-10 h-10" style={{ color: '#1a4a2e' }} />}
                             title="Clear Title & Legal Approval"
                             description="We ensure every project has 100% clear titles and necessary government approvals (DTCP/RERA) before launch."
                         />
                         <WhyCard
-                            icon={<TrendingUp className="w-10 h-10 text-emerald-600" />}
+                            icon={<TrendingUp className="w-10 h-10" style={{ color: '#1a4a2e' }} />}
                             title="High ROI & Appreciation"
                             description="Our properties are located in high-growth corridors, ensuring substantial appreciation over time."
                         />
                         <WhyCard
-                            icon={<Handshake className="w-10 h-10 text-emerald-600" />}
+                            icon={<Handshake className="w-10 h-10" style={{ color: '#1a4a2e' }} />}
                             title="Professional Team"
                             description="Managed by experienced professionals dedicated to transparency and customer satisfaction."
                         />
@@ -59,7 +59,7 @@ export default function WhyChooseUs() {
                 <div className="container mx-auto px-4 md:px-6">
                     <div className="flex flex-col md:flex-row gap-12 items-center">
                         <div className="md:w-1/2">
-                            <h2 className="text-emerald-600 font-medium tracking-wide uppercase mb-3">Legal & Compliance</h2>
+                            <h2 className="font-medium tracking-wide uppercase mb-3" style={{ color: '#1a4a2e' }}>Legal &amp; Compliance</h2>
                             <h3 className="text-3xl font-playfair font-bold text-slate-900 mb-6">
                                 Complete Peace of Mind
                             </h3>
@@ -75,7 +75,7 @@ export default function WhyChooseUs() {
                         </div>
                         <div className="md:w-1/2 relative">
                             <div className="aspect-square bg-white p-8 rounded-2xl shadow-xl flex items-center justify-center">
-                                <Gavel className="w-32 h-32 text-emerald-500 opacity-20" />
+                                <Gavel className="w-32 h-32 opacity-20" style={{ color: '#1a4a2e' }} />
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     <h4 className="text-2xl font-bold text-slate-800 text-center">100%<br />Compliant</h4>
                                 </div>
@@ -89,8 +89,8 @@ export default function WhyChooseUs() {
             <Section>
                 <div className="container mx-auto px-4 md:px-6 text-center">
                     <div className="mb-12">
-                        <span className="inline-block p-3 rounded-full bg-emerald-100 mb-4">
-                            <Leaf className="w-8 h-8 text-emerald-600" />
+                        <span className="inline-block p-3 rounded-full mb-4" style={{ backgroundColor: 'rgba(201,162,39,0.15)' }}>
+                            <Leaf className="w-8 h-8" style={{ color: '#1a4a2e' }} />
                         </span>
                         <h2 className="text-3xl md:text-4xl font-playfair font-bold text-slate-900 mb-4">Sustainability Focus</h2>
                         <p className="text-slate-600 max-w-2xl mx-auto">
@@ -134,7 +134,7 @@ function WhyCard({ icon, title, description }) {
 function ListItem({ text }) {
     return (
         <li className="flex items-center gap-3 text-slate-700 text-lg">
-            <CheckCircle className="w-5 h-5 text-emerald-500 shrink-0" />
+            <CheckCircle className="w-5 h-5 shrink-0" style={{ color: '#c9a227' }} />
             {text}
         </li>
     );
@@ -142,7 +142,7 @@ function ListItem({ text }) {
 
 function SustainabilityCard({ title, desc }) {
     return (
-        <div className="bg-emerald-50 p-6 rounded-xl border border-emerald-100">
+        <div className="p-6 rounded-xl border" style={{ backgroundColor: 'rgba(201,162,39,0.08)', borderColor: 'rgba(201,162,39,0.2)' }}>
             <h3 className="text-lg font-bold text-slate-900 mb-2">{title}</h3>
             <p className="text-slate-600">{desc}</p>
         </div>

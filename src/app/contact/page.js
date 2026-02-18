@@ -29,7 +29,7 @@ export default function Contact() {
 
     return (
         <>
-            <section className="bg-slate-900 py-20 text-center relative overflow-hidden">
+            <section className="py-20 text-center relative overflow-hidden" style={{ backgroundColor: '#1a4a2e' }}>
                 <div className="absolute inset-0 z-0 opacity-20">
                     <Image
                         src="https://images.unsplash.com/photo-1516387938699-a93567ec168e?q=80&w=2942&auto=format&fit=crop"
@@ -74,7 +74,7 @@ export default function Contact() {
                                 <ContactItem
                                     icon={<Mail className="w-6 h-6 text-white" />}
                                     title="Email Us"
-                                    content="info@harshamresidences.com"
+                                    content="info@haarshamfarms.com"
                                 />
                             </div>
 
@@ -177,7 +177,7 @@ export default function Contact() {
 function ContactItem({ icon, title, content }) {
     return (
         <div className="flex items-start gap-4">
-            <div className="bg-emerald-600 p-3 rounded-full shadow-lg shadow-emerald-200 shrink-0">
+            <div className="p-3 rounded-full shadow-lg shrink-0" style={{ backgroundColor: '#1a4a2e' }}>
                 {icon}
             </div>
             <div>

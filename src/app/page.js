@@ -14,7 +14,7 @@ export default function Home() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/70 via-slate-900/50 to-slate-900/80 z-10" />
+          <div className="absolute inset-0 z-10" style={{ background: 'linear-gradient(to bottom, rgba(15,45,28,0.75), rgba(15,45,28,0.5), rgba(15,45,28,0.85))' }} />
           {/* Placeholder for Hero Image - In a real app, use a real image */}
           <div className="w-full h-full bg-slate-800 relative">
             <Image
@@ -35,7 +35,7 @@ export default function Home() {
             className="text-4xl md:text-6xl lg:text-7xl font-playfair font-bold mb-6 leading-tight"
           >
             Trusted Residential & <br className="hidden md:block" />
-            <span className="text-emerald-400">Farm Land Developments</span>
+            <span style={{ color: '#c9a227' }}>Farm Land Developments</span>
           </motion.h1>
 
           <motion.p
@@ -44,7 +44,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg md:text-xl text-slate-200 mb-10 max-w-2xl mx-auto leading-relaxed"
           >
-            Legally approved residential layouts and farm lands designed for long-term value and peaceful living. Invest in your future with Harsham Residences.
+            Legally approved residential layouts and farm lands designed for long-term value and peaceful living. Invest in your future with Haarsham Farms &amp; Developers.
           </motion.p>
 
           <motion.div
@@ -53,7 +53,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Button href="/projects" variant="primary" className="text-lg px-8 py-4">
+            <Button href="/projects" variant="gold" className="text-lg px-8 py-4">
               View Projects
             </Button>
             <Button href="/contact" variant="white" className="text-lg px-8 py-4">
@@ -76,12 +76,12 @@ export default function Home() {
               />
             </div>
             <div>
-              <h2 className="text-emerald-600 font-medium tracking-wide uppercase mb-3">Who We Are</h2>
+              <h2 className="font-medium tracking-wide uppercase mb-3" style={{ color: '#1a4a2e' }}>Who We Are</h2>
               <h3 className="text-3xl md:text-4xl font-playfair font-bold text-slate-900 mb-6">
                 Premium Real Estate with Integrity & Clear Titles
               </h3>
               <p className="text-slate-600 mb-6 leading-relaxed text-lg">
-                Harsham Residences / Harsham Farms is a trusted real-estate development company specializing in DTCP / RERA-approved residential layouts and farm land projects. We prioritize modern infrastructure, transparent documentation, and sustainable living environments.
+                Haarsham Farms &amp; Developers is a trusted real-estate development company specializing in DTCP / RERA-approved residential layouts and farm land projects. We prioritize modern infrastructure, transparent documentation, and sustainable living environments.
               </p>
               <Button href="/about" variant="outline" className="group">
                 Read More <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -101,22 +101,22 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <HighlightCard
-              icon={<ShieldCheck className="w-10 h-10 text-emerald-600" />}
+              icon={<ShieldCheck className="w-10 h-10" style={{ color: '#1a4a2e' }} />}
               title="DTCP / RERA Approved"
               description="All our projects come with necessary legal approvals ensuring a safe investment."
             />
             <HighlightCard
-              icon={<CheckCircle2 className="w-10 h-10 text-emerald-600" />}
+              icon={<CheckCircle2 className="w-10 h-10" style={{ color: '#1a4a2e' }} />}
               title="Clear Title"
               description="100% transparent documentation giving you complete peace of mind and ownership assurance."
             />
             <HighlightCard
-              icon={<MapPin className="w-10 h-10 text-emerald-600" />}
+              icon={<MapPin className="w-10 h-10" style={{ color: '#1a4a2e' }} />}
               title="Strategic Locations"
               description="Handpicked locations with high growth potential and excellent connectivity."
             />
             <HighlightCard
-              icon={<TrendingUp className="w-10 h-10 text-emerald-600" />}
+              icon={<TrendingUp className="w-10 h-10" style={{ color: '#1a4a2e' }} />}
               title="High Appreciation"
               description="Designed to offer substantial returns on investment over the long term."
             />
@@ -124,7 +124,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section className="bg-emerald-900 text-white py-16">
+      <Section className="text-white py-16" style={{ backgroundColor: '#1a4a2e' }}>
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <StatCounter end={12} title="Years of Experience" />
@@ -146,7 +146,7 @@ export default function Home() {
             <TestimonialCard
               name="Rajesh Kumar"
               role="Software Engineer"
-              content="Investing with Harsham was the best decision. The clarity in documentation and their professional approach gave me complete confidence."
+              content="Investing with Haarsham was the best decision. The clarity in documentation and their professional approach gave me complete confidence."
             />
             <TestimonialCard
               name="Anita Desai"
@@ -156,7 +156,7 @@ export default function Home() {
             <TestimonialCard
               name="Suresh Reddy"
               role="NRI Investor"
-              content="Living abroad, it's hard to trust local developers. Harsham's transparency and regular updates made the entire process seamless."
+              content="Living abroad, it's hard to trust local developers. Haarsham's transparency and regular updates made the entire process seamless."
             />
           </div>
         </div>
@@ -167,7 +167,7 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12">
             <div>
-              <h2 className="text-emerald-400 font-medium tracking-wide uppercase mb-3">Our Projects</h2>
+              <h2 className="font-medium tracking-wide uppercase mb-3" style={{ color: '#c9a227' }}>Our Projects</h2>
               <h3 className="text-3xl md:text-4xl font-playfair font-bold mb-4">Find Your Perfect Plot</h3>
             </div>
             <Button href="/projects" variant="white" className="hidden md:flex">
@@ -202,12 +202,12 @@ export default function Home() {
       </Section>
 
       {/* CTA Banner */}
-      <Section className="bg-emerald-700">
+      <Section className="" style={{ backgroundColor: '#1a4a2e' }}>
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-playfair font-bold text-white mb-6">
             Looking for a safe land investment?
           </h2>
-          <p className="text-emerald-100 text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-green-100 text-lg mb-8 max-w-2xl mx-auto">
             Contact us today to explore our latest projects and book a site visit. Your dream property awaits.
           </p>
           <Button href="/contact" variant="white" className="text-lg px-10 py-4 shadow-xl">
@@ -225,7 +225,7 @@ function HighlightCard({ icon, title, description }) {
       whileHover={{ y: -5 }}
       className="bg-white p-8 rounded-2xl shadow-lg border border-slate-100"
     >
-      <div className="mb-6 bg-emerald-50 w-20 h-20 rounded-full flex items-center justify-center">
+      <div className="mb-6 w-20 h-20 rounded-full flex items-center justify-center" style={{ backgroundColor: 'rgba(201,162,39,0.15)' }}>
         {icon}
       </div>
       <h3 className="text-xl font-bold text-slate-900 mb-3">{title}</h3>
@@ -252,7 +252,7 @@ function ProjectCard({ title, image, desc }) {
         <p className="text-slate-200 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
           {desc}
         </p>
-        <span className="inline-flex items-center text-emerald-400 font-medium group-hover:underline">
+        <span className="inline-flex items-center font-medium group-hover:underline" style={{ color: '#c9a227' }}>
           Explore <ArrowRight className="ml-2 w-4 h-4" />
         </span>
       </div>
