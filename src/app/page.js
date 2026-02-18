@@ -124,16 +124,20 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section className="text-white py-16" style={{ backgroundColor: '#1a4a2e' }}>
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <StatCounter end={12} title="Years of Experience" />
-            <StatCounter end={50} suffix="+" title="Completed Projects" />
-            <StatCounter end={1500} suffix="+" title="Happy Customers" />
-            <StatCounter end={100} suffix="%" title="Legal Compliance" />
-          </div>
-        </div>
-      </Section>
+<Section
+  className="py-16 bg-[#0f3d2e]"
+>
+  <div className="container mx-auto px-4 md:px-6">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-[#d4af37] [&_*]:!text-[#d4af37]">
+      <StatCounter end={12} title="Years of Experience" />
+      <StatCounter end={50} suffix="+" title="Completed Projects" />
+      <StatCounter end={150} suffix="+" title="Happy Customers" />
+      <StatCounter end={100} suffix="%" title="Legal Compliance" />
+    </div>
+  </div>
+</Section>
+
+
 
       {/* Testimonials */}
       <Section className="bg-slate-50">
@@ -146,18 +150,19 @@ export default function Home() {
             <TestimonialCard
               name="Rajesh Kumar"
               role="Software Engineer"
-              content="Investing with Haarsham was the best decision. The clarity in documentation and their professional approach gave me complete confidence."
+              content="Investing with Haarsham Farms & Developers was the best decision I made. Their clear documentation and professional guidance gave me complete confidence throughout the process."
             />
             <TestimonialCard
-              name="Anita Desai"
+              name="karthi"
               role="Business Owner"
-              content="I was looking for a farm land for a weekend getaway. The location they suggested is beautiful and has appreciated significantly in just 2 years."
+              content="I was searching for a peaceful farm land investment. The location recommended by Haarsham is beautiful and has shown excellent appreciation within just two years."
             />
-            <TestimonialCard
-              name="Suresh Reddy"
-              role="NRI Investor"
-              content="Living abroad, it's hard to trust local developers. Haarsham's transparency and regular updates made the entire process seamless."
-            />
+          <TestimonialCard
+  name="Mani"
+  role="College Student"
+  content="Haarsham guided me clearly through the investment process. Their transparency and support made it easy even for a first-time investor."
+/>
+
           </div>
         </div>
       </Section>
