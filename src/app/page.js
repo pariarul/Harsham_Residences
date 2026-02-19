@@ -56,9 +56,14 @@ export default function Home() {
             <Button href="/projects" variant="gold" className="text-lg px-8 py-4">
               View Projects
             </Button>
-            <Button href="/contact" variant="white" className="text-lg px-8 py-4">
-              Book Site Visit
-            </Button>
+          <Button
+  href="https://wa.me/919876543210"
+  variant="white"
+  className="text-lg px-8 py-4"
+  target="_blank"
+>
+  Book Site Visit
+</Button>
           </motion.div>
         </div>
       </section>

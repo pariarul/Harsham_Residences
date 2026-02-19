@@ -40,7 +40,9 @@ export default function Footer() {
                         <ul className="space-y-4">
                             <FooterLink href="/" label="Home" />
                             <FooterLink href="/about" label="About Us" />
+                            <FooterLink href="/factory-site" label="Factory Site" />
                             <FooterLink href="/projects" label="Projects" />
+                            <FooterLink href="/infra-developments" label="Infra & Developments" />
                             <FooterLink href="/why-choose-us" label="Why Choose Us" />
                             <FooterLink href="/contact" label="Contact" />
                         </ul>

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone ,MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Button from "@/components/ui/Button";
@@ -13,7 +13,9 @@ import Image from "next/image";
 const navLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
+    { name: "Factory Site", href: "/factory-site" },
     { name: "Projects", href: "/projects" },
+    { name: "Infra & Developments", href: "/infra-developments" },
     { name: "Why Choose Us", href: "/why-choose-us" },
     { name: "Contact", href: "/contact" },
 ];
@@ -72,8 +74,9 @@ export default function Navbar() {
                         </Link>
                     ))}
                     <Button
-                        href="/contact"
-                        variant="gold"
+                          href="https://wa.me/919876543210"
+  variant="white"
+  target="_blank"
                         className="px-5 py-2 text-sm"
                     >
                         Book Site Visit
@@ -94,48 +97,57 @@ export default function Navbar() {
                 </button>
 
                 {/* Mobile Navigation Overlay */}
-                <AnimatePresence>
-                    {isOpen && (
-                        <motion.div
-                            initial={{ opacity: 0, y: -20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -20 }}
-                            transition={{ duration: 0.2 }}
-                            className="fixed inset-0 z-40 flex flex-col items-center justify-center space-y-8 md:hidden"
-                            style={{ backgroundColor: "#1a4a2e" }}
-                        >
-                            {/* Mobile Logo */}
-                            <div className="flex items-center gap-3 mb-4">
-                                <div
-                                    className="w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shadow-md"
-                                    style={{ backgroundColor: "#c9a227", color: "#1a4a2e" }}
-                                >
-                                    H
-                                </div>
-                                <div>
-                                    <p className="font-bold text-xl" style={{ color: "#c9a227" }}>Haarsham</p>
-                                    <p className="text-white text-sm">Farms &amp; Developers</p>
-                                </div>
-                            </div>
-                            {navLinks.map((link) => (
-                                <Link
-                                    key={link.name}
-                                    href={link.href}
-                                    onClick={() => setIsOpen(false)}
-                                    className="text-2xl font-semibold transition-colors hover:opacity-80"
-                                    style={{
-                                        color: pathname === link.href ? "#c9a227" : "white"
-                                    }}
-                                >
-                                    {link.name}
-                                </Link>
-                            ))}
-                            <Button href="/contact" onClick={() => setIsOpen(false)} variant="gold">
-                                Book Site Visit
-                            </Button>
-                        </motion.div>
-                    )}
-                </AnimatePresence>
+{/* Mobile Navigation Overlay */}
+<AnimatePresence>
+  {isOpen && (
+    <motion.div
+      initial={{ opacity: 0, y: -30 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -30 }}
+      transition={{ duration: 0.25, ease: "easeOut" }}
+      className="fixed inset-0 z-40 flex flex-col items-center justify-center space-y-10 md:hidden"
+      style={{ backgroundColor: "#1a4a2e" }}
+    >
+      {/* Close Button */}
+      <button
+        onClick={() => setIsOpen(false)}
+        className="absolute top-6 right-6 text-white hover:opacity-80"
+      >
+        <X size={28} />
+      </button>
+
+      {/* Navigation Links */}
+      {navLinks.map((link) => (
+        <Link
+          key={link.name}
+          href={link.href}
+          onClick={() => setIsOpen(false)}
+          className="text-2xl font-semibold tracking-wide transition-all hover:scale-105"
+          style={{
+            color: pathname === link.href ? "#c9a227" : "white",
+          }}
+        >
+          {link.name}
+        </Link>
+      ))}
+
+      {/* WhatsApp CTA */}
+      <motion.a
+        href="https://wa.me/919876543210?text=Hello%20I%20would%20like%20to%20book%20a%20site%20visit"
+        target="_blank"
+        onClick={() => setIsOpen(false)}
+        initial={{ scale: 0.95 }}
+        animate={{ scale: 1 }}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="mt-6 inline-flex items-center gap-3 rounded-full bg-[#25D366] px-8 py-4 text-lg font-semibold text-white shadow-lg"
+      >
+        <MessageCircle size={22} />
+        Book Site Visit
+      </motion.a>
+    </motion.div>
+  )}
+</AnimatePresence>
             </div>
         </nav>
     );
