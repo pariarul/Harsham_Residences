@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import Section from "@/components/ui/Section";
 import Image from "next/image";
+import Button from "@/components/ui/Button";
 
 export default function InfraDevelopments() {
   return (
@@ -168,12 +169,13 @@ export default function InfraDevelopments() {
             Schedule a site visit today and see the Harsham difference for yourself. Our infrastructure is built for generations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-10 py-4 bg-[#c9a227] text-white font-bold rounded-full hover:bg-[#b08d1e] transition-colors shadow-lg shadow-gold/20">
+            <Button href="/projects"  className="px-10 py-4 bg-[#c9a227] text-white font-bold rounded-full hover:bg-[#b08d1e] transition-colors shadow-lg shadow-gold/20">
               Request Brochure
-            </button>
-            <button className="px-10 py-4 border-2 border-white/20 text-white font-bold rounded-full hover:bg-white/10 transition-colors">
+            </Button>
+            <Button  href="https://wa.me/9342339001"  className="px-10 py-4 border-2 border-white/20 bg-white text-black font-bold rounded-full hover:bg-white/10 transition-colors">
               Book Site Visit
-            </button>
+            </Button>
+
           </div>
         </div>
       </section>

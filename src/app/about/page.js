@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import Section from "@/components/ui/Section";
 import Image from "next/image";
+import Button from "@/components/ui/Button";
 
 /* =========================
    MAIN ABOUT PAGE
@@ -213,18 +214,20 @@ export default function About() {
             </p>
 
             <div className="flex justify-center gap-4 flex-wrap">
-              <button
+              <a href="/projects"
                 className="px-8 py-3 rounded-full font-semibold text-white"
                 style={{ backgroundColor: "#1a4a2e" }}
               >
                 View Projects
-              </button>
-              <button
+              </a>
+              <Button
                 className="px-8 py-3 rounded-full font-semibold border-2"
                 style={{ borderColor: "#1a4a2e", color: "#1a4a2e" }}
+                  href="https://wa.me/9342339001"
+                 target="_blank"
               >
                 Book Site Visit
-              </button>
+              </Button>
             </div>
           </div>
         </div>
