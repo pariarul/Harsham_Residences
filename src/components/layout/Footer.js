@@ -63,7 +63,10 @@ export default function Footer() {
                         <ul className="space-y-4">
                             <li className="flex items-start gap-3 text-green-200">
                                 <MapPin className="w-5 h-5 shrink-0 mt-1" style={{ color: "#c9a227" }} />
-                                <span>123 Green Valley Road, Eco City, 560001</span>
+                                <span>No.11/2, Thirumalai Nagar 
+Behind Vailankanni School 
+Hosur - 635 109,
+Krishnagiri Dt.</span>
                             </li>
                             <li className="flex items-center gap-3 text-green-200">
                                 <Phone className="w-5 h-5 shrink-0" style={{ color: "#c9a227" }} />

@@ -64,7 +64,7 @@ export default function Contact() {
                                 <ContactItem
                                     icon={<MapPin className="w-6 h-6 text-white" />}
                                     title="Visit Office"
-                                    content={<>123 Green Valley Road,<br />Eco City, Bengaluru - 560001</>}
+                                    content={<>No.11/2, Thirumalai Nagar<br />Behind Vailankanni School<br />Hosur - 635 109,<br />Krishnagiri Dt</>}
                                 />
                                 <ContactItem
                                     icon={<Phone className="w-6 h-6 text-white" />}
@@ -78,18 +78,28 @@ export default function Contact() {
                                 />
                             </div>
 
-                            <div className="mt-12 h-[300px] w-full bg-slate-100 rounded-2xl overflow-hidden relative">
-                                {/* Placeholder map */}
-                                <Image
-                                    src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2948&auto=format&fit=crop"
-                                    alt="Map Location"
-                                    fill
-                                    className="object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-500"
-                                />
-                                <div className="absolute inset-0 flex items-center justify-center">
-                                    <p className="bg-white/80 backdrop-blur-sm px-4 py-2 rounded-lg font-medium text-slate-800">Map View Placeholder</p>
-                                </div>
-                            </div>
+<div className="mt-12 h-[300px] w-full bg-slate-100 rounded-2xl overflow-hidden relative">
+  <a
+    href="https://www.google.com/maps?q=12.7337637,77.817344"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block w-full h-full"
+  >
+<Image
+  src="https://maps.wikimedia.org/img/osm-intl,17,12.7337637,77.817344,600x400.png"
+  alt="Map Location"
+  fill
+  unoptimized
+  className="object-cover opacity-70 hover:opacity-100 transition-all duration-500 cursor-pointer"
+/>
+  </a>
+
+  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+    <p className="bg-white/80 backdrop-blur-sm px-4 py-2 rounded-lg font-medium text-slate-800">
+      Click to Open in Google Maps
+    </p>
+  </div>
+</div>
                         </div>
 
                         {/* Enquiry Form */}

@@ -262,9 +262,9 @@ function ProjectCard({ title, image, desc }) {
         <p className="text-slate-200 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
           {desc}
         </p>
-        <span className="inline-flex items-center font-medium group-hover:underline" style={{ color: '#c9a227' }}>
+        <a href="/projects" className="inline-flex items-center font-medium group-hover:underline" style={{ color: '#c9a227' }}>
           Explore <ArrowRight className="ml-2 w-4 h-4" />
-        </span>
+        </a>
       </div>
     </motion.div>
   );
