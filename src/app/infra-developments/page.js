@@ -21,13 +21,14 @@ export default function InfraDevelopments() {
       <section className="relative h-[65vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 z-10" style={{ background: 'linear-gradient(to bottom, rgba(15,45,28,0.8), rgba(15,45,28,0.4))' }} />
-          <Image
-            src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=2940&auto=format&fit=crop"
-            alt="Infrastructure Development"
-            fill
-            className="object-cover"
-            priority
-          />
+ <Image
+  src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80"
+  alt="Infrastructure Development"
+  fill
+  unoptimized
+  className="object-cover"
+  priority
+/>
         </div>
 
         <div className="container mx-auto px-4 z-20 text-center text-white">
@@ -119,12 +120,13 @@ export default function InfraDevelopments() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 h-[600px]">
             <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl group">
-              <Image 
-                src="https://images.unsplash.com/photo-1590487988256-78f442300b3e?q=80&w=2800&auto=format&fit=crop" 
-                alt="Road Development" 
-                fill 
-                className="object-cover transition-transform duration-700 group-hover:scale-110" 
-              />
+<Image 
+  src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"
+  alt="Road Development" 
+  fill 
+  unoptimized
+  className="object-cover transition-transform duration-700 group-hover:scale-110" 
+/>
               <div className="absolute inset-0 bg-black/40 flex items-end p-12">
                 <h4 className="text-white text-2xl font-bold">Planned Grid Layouts</h4>
               </div>
@@ -143,7 +145,7 @@ export default function InfraDevelopments() {
               </div>
               <div className="relative rounded-[2.5rem] overflow-hidden shadow-xl group">
                 <Image 
-                  src="https://images.unsplash.com/photo-1544161515-4ad6ce6ec307?q=80&w=2670&auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1200&q=80"
                   alt="Security Infrastructure" 
                   fill 
                   className="object-cover transition-transform duration-700 group-hover:scale-110" 

@@ -71,7 +71,7 @@ export default function Projects() {
                     <ProjectCategory
                         title="Gated Communities"
                         description="Experience secure and organized living in our premium gated communities with controlled access."
-                        image="https://images.unsplash.com/photo-1582268611958-abfd38471bc6?q=80&w=2940&auto=format&fit=crop"
+                        image="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
                         features={[
                             "Secure layouts",
                             "Defined boundaries",
@@ -87,9 +87,9 @@ export default function Projects() {
             {/* Buying Process */}
             <Section className="text-white" style={{ backgroundColor: '#0f2d1c' }}>
                 <div className="container mx-auto px-4 md:px-6">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-16 text-black">
                         <h2 className="text-3xl md:text-4xl font-playfair font-bold mb-4">Hassle-Free Buying Process</h2>
-                        <p className="text-green-200 max-w-2xl mx-auto">We make owning your dream plot a simple and transparent journey.</p>
+                        <p className="text-green-800 max-w-2xl mx-auto">We make owning your dream plot a simple and transparent journey.</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                         <ProcessStep number="01" title="Site Visit" desc="Schedule a free site visit to explore the location and amenities." />

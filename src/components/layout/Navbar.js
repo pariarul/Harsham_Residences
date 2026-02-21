@@ -13,7 +13,6 @@ import Image from "next/image";
 const navLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
-    { name: "Factory Site", href: "/factory-site" },
     { name: "Projects", href: "/projects" },
     { name: "Infra & Developments", href: "/infra-developments" },
     { name: "Why Choose Us", href: "/why-choose-us" },
@@ -74,7 +73,7 @@ export default function Navbar() {
                         </Link>
                     ))}
                     <Button
-                          href="https://wa.me/919876543210"
+                          href="https://wa.me/9342339001"
   variant="white"
   target="_blank"
                         className="px-5 py-2 text-sm"

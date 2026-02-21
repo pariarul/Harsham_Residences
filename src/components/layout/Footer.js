@@ -33,14 +33,12 @@ export default function Footer() {
                             <SocialLink href="#" icon={<Linkedin className="w-5 h-5" />} />
                         </div>
                     </div>
-
                     {/* Quick Links */}
                     <div>
                         <h3 className="text-lg font-semibold mb-6" style={{ color: "#c9a227" }}>Quick Links</h3>
                         <ul className="space-y-4">
                             <FooterLink href="/" label="Home" />
                             <FooterLink href="/about" label="About Us" />
-                            <FooterLink href="/factory-site" label="Factory Site" />
                             <FooterLink href="/projects" label="Projects" />
                             <FooterLink href="/infra-developments" label="Infra & Developments" />
                             <FooterLink href="/why-choose-us" label="Why Choose Us" />
@@ -69,7 +67,7 @@ export default function Footer() {
                             </li>
                             <li className="flex items-center gap-3 text-green-200">
                                 <Phone className="w-5 h-5 shrink-0" style={{ color: "#c9a227" }} />
-                                <span>+91 98765 43210</span>
+                                <span>+91 9342339001</span>
                             </li>
                             <li className="flex items-center gap-3 text-green-200">
                                 <Mail className="w-5 h-5 shrink-0" style={{ color: "#c9a227" }} />

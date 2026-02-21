@@ -57,7 +57,7 @@ export default function Home() {
               View Projects
             </Button>
           <Button
-  href="https://wa.me/919876543210"
+  href="https://wa.me/9342339001"
   variant="white"
   className="text-lg px-8 py-4"
   target="_blank"
@@ -196,11 +196,11 @@ export default function Home() {
               image="https://images.unsplash.com/photo-1500076656116-558758c991c1?q=80&w=2942&auto=format&fit=crop"
               desc="Fertile land for agriculture and weekend getaways."
             />
-            <ProjectCard
-              title="Gated Communities"
-              image="https://images.unsplash.com/photo-1582268611958-abfd38471bc6?q=80&w=2940&auto=format&fit=crop"
-              desc="Secure, organized living with controlled access."
-            />
+<ProjectCard
+  title="Gated Communities"
+  image="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
+  desc="Secure, organized living with controlled access."
+/>
           </div>
 
           <div className="mt-12 text-center md:hidden">
@@ -214,10 +214,10 @@ export default function Home() {
       {/* CTA Banner */}
       <Section className="" style={{ backgroundColor: '#1a4a2e' }}>
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-playfair font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-playfair font-bold text-black mb-6">
             Looking for a safe land investment?
           </h2>
-          <p className="text-green-100 text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-green-900 text-lg mb-8 max-w-2xl mx-auto">
             Contact us today to explore our latest projects and book a site visit. Your dream property awaits.
           </p>
           <Button href="/contact" variant="white" className="text-lg px-10 py-4 shadow-xl">

@@ -12,7 +12,7 @@ export default function WhyChooseUs() {
                 <div className="absolute inset-0 z-0 opacity-20">
                     <Image
 
-                        src="https://images.unsplash.com/photo-1542601906990-24ccd54b549d?q=80&w=2874&auto=format&fit=crop"
+                       src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1200&q=80"
                         alt="Planning"
                         fill
                         className="object-cover"
